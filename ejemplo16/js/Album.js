@@ -13,13 +13,14 @@ class Album{
         for(let i=0; i<this.imagesSrc.length; i++){
             const photoSrc = this.imagesSrc[i];
             const image = new Image(photoSrc, i);
-            this.albumView.addEventListener('click-image', this.onThumbnailClick);
+            document.addEventListener('click-image', this.onThumbnailClick);
             this.miniaturas.push(image);
             this.albumView.appendChild(image.image);
         }
     }
     onThumbnailClick(event){
-        console.log('a')
+        if(event.detail.target.parentElement !== this.albumView)
+            return
         this.modal.currentIndex = event.detail.target.dataset.index;
         const image = new Image(event.detail.target.src);
         this.modal.contenedor.appendChild(image.image);
