@@ -5,6 +5,7 @@ class Modal{
         this.currentIndex = null;
         this.photo_list = photo_list;
         this.nextPhoto = this.nextPhoto.bind(this);
+        this.onModalClick = this.onModalClick.bind(this);
         this.contenedor.addEventListener('click', this.onModalClick)
     }
     hideModal(){
@@ -27,8 +28,11 @@ class Modal{
         } else {
             nextIndex++;
         }
-        if (nextIndex < 0 || nextIndex === this.photo_list.length) {
-            return;
+        if (nextIndex < 0 ) {
+            nextIndex = this.photo_list.length-1;
+        }
+        if(nextIndex === this.photo_list.length){
+            nextIndex = 0;
         }
         const photoSrc = this.photo_list[nextIndex];
         this.contenedor.innerHTML = '';
