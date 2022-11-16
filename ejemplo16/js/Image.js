@@ -12,6 +12,7 @@ class Image{
         return image;
     }
     onClick(event){
+        console.log(event.target)
         const eventInfo = {target: event.target};
         document.dispatchEvent(new CustomEvent('click-image', {
             detail:

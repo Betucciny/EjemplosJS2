@@ -1,9 +1,9 @@
 class Modal{
     constructor(contenedor, photo_list) {
-        this.contenedor = contenedor
+        this.contenedor = contenedor;
+        this.contenedor.innerHTML = '';
         this.currentIndex = null;
         this.photo_list = photo_list;
-        this.hideModal();
         this.nextPhoto = this.nextPhoto.bind(this);
         this.contenedor.addEventListener('click', this.onModalClick)
     }

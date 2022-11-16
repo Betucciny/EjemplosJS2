@@ -3,6 +3,7 @@ class Album{
         this.albumView = albumView;
         this.miniaturas = [];
         const contenedor = document.querySelector('#modal-view');
+        contenedor.innerHTML = '';
         this.modal = new Modal(contenedor, photo_list);
         this.imagesSrc = photo_list;
         this.onThumbnailClick = this.onThumbnailClick.bind(this)
@@ -12,12 +13,13 @@ class Album{
         for(let i=0; i<this.imagesSrc.length; i++){
             const photoSrc = this.imagesSrc[i];
             const image = new Image(photoSrc, i);
-            document.addEventListener('click-image', this.onThumbnailClick);
+            this.albumView.addEventListener('click-image', this.onThumbnailClick);
             this.miniaturas.push(image);
             this.albumView.appendChild(image.image);
         }
     }
     onThumbnailClick(event){
+        console.log('a')
         this.modal.currentIndex = event.detail.target.dataset.index;
         const image = new Image(event.detail.target.src);
         this.modal.contenedor.appendChild(image.image);

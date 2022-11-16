@@ -1,9 +1,10 @@
-#album-view img{
+#album-view img, #album-view2 img {
     border: 1px solid slategray;
     margin: 5px;
     padding: 5px;
     height: 150px;
 }
+
 
 #modal-view{
     position: absolute;
