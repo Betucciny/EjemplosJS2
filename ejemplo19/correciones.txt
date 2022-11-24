@@ -1,0 +1,21 @@
+dentro del css
+Se declaran muchos elementos repetidos dentro de las hojas de estilos
+las clases tienen nombres ambiguos y tienen propiedas que no se usan en cascada
+se ocupan las medidas en pixeles en vez de las relativas
+se ocupan propiedades especializadas por navegadores
+se ocupan varios elementos que ya no son reconocidos en html5
+en vairos luagres cuando se declaran las fuentes no se declara una alternativa generica
+hay un estilo declarado en una sola linea haciendolo muy complicado de leer
+
+dentro del js
+se ocupan varios procesos de javascript para dar estilo en vez de css
+se hacen uso de javaquery el cual ya esta descontinuado
+se hace uso de var cuando ya no se deberia 
+
+dentro del html
+los cripts se mandan a llamar a todos untos hasta abajo de la pagina
+se hace abuso del uso de div en vez de estructuras semanticas
+se dan tamaños y estilos en vez de dejar que los maneje css
+se abusa de las etiquetas h para reslatar texto rompiendo el orden semantico
+se hace uso de tags obsoletas como font 
+se usan etiquedtas como span para remarcar contenido solo de manera visual y no semantica
